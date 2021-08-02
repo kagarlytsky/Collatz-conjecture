@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
        
 	nums = fopen("nums.txt", "w+");
 	x = atoi(argv[1]);
-	fprintf(nums, "initial number: %d\n", x); 
+	fprintf(nums, "Initial number: %d\n", x); 
 
 	int counter = 0;
 	int digits[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -63,15 +63,15 @@ int main(int argc, char *argv[])
 
 	}
 
-
-	printf("amount of steps: %d\n", counter);
-	printf("highest point: %d\n", max);
-	printf("average value: %.1f\n", (float)numSum/counter+1);
+	printf("Number: %d\n", x);
+	printf("Amount of steps: %d\n", counter);
+	printf("Highest point: %d\n", max);
+	printf("Average value: %.1f\n", (float)numSum/counter+1);
 
 	int digitSum = 0;
 	for (i = 0; i < 9; i++) digitSum += digits[i];
 
-	printf("\nleading digit (percentage):");
+	printf("\nLeading digit (percentage):");
 	for (i = 0; i < 9; i++) {
 		float percentage = ((float)digits[i] / (float)digitSum) * 100;
 		printf("\n%d (%4.1f%%)| ", i+1, percentage);
