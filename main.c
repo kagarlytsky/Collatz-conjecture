@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
 	nums = fopen("nums.txt", "w+");
 	x = atoi(argv[1]);
 	fprintf(nums, "Initial number: %d\n", x); 
+	printf("Number: %d\n", x);
 
 	int counter = 0;
 	int digits[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -63,7 +64,6 @@ int main(int argc, char *argv[])
 
 	}
 
-	printf("Number: %d\n", x);
 	printf("Amount of steps: %d\n", counter);
 	printf("Highest point: %d\n", max);
 	printf("Average value: %.1f\n", (float)numSum/counter+1);
